@@ -1,0 +1,78 @@
+*,
+	*::after,
+	*::before{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+	*:focus {outline: none;}
+	:root{
+		--color:rgba(35,172,157,1.00);
+		--heigtInput:2.5rem;
+		--widthInput:100%;
+		--paddingLeft:.5rem;
+		--marginTop:1rem;
+		--borderRadius:7px;
+		--border:none;
+		--transicion:all .8s;
+		
+	}
+#boxSingIn{
+		width: 100%;
+		height: 100vh;
+		background-image: url(Images/audio.jpg);
+		display: flex;
+		
+	}
+	#formSignIn{
+		display: block;
+		margin: auto;
+		width: 40%;
+		height: auto;
+		background-color: rgba(132,132,132,1.00)
+		padding: 5%;
+		border-radius: var(--borderRadius);
+		
+	}
+	#formSignIn:hover{
+		transition:  var(--transicion);
+		  box-shadow: 5px 10px 15px rgba(30,14,70,0.50);
+		cursor: pointer;
+	}
+	#user{
+		width: var(--widthInput);
+		height: var(--heigtInput);
+		padding-left: var(--paddingLeft);
+		font-family: 'Poppins', sans-serif;
+		margin-top: var(--marginTop);
+		border-radius: var(--borderRadius);
+		border-style: var(--border);
+	}
+	#user:hover,#pwd:hover{
+		
+		transition:  var(--transicion);
+		box-shadow: 3px 3px 10px  rgba(179,179,179,0.71);
+	}
+	#pwd{
+		width: var(--widthInput);
+		height: var(--heigtInput);
+		padding-left: var(--paddingLeft);
+		margin-top: var(--marginTop);
+		border-radius: var(--borderRadius);
+		border-style: var(--border);
+	}
+	#SignIn{
+		display: block;
+		width: 30%;
+		height: var(--heigtInput);
+		margin:var(--marginTop) 0 1rem 65%;
+		border-radius: var(--borderRadius);
+		border-style: var(--border);
+		font-size: 1rem;
+		font-family: 'Poppins', sans-serif; 
+	}
+	#op{
+		color: white;
+		text-decoration: none;
+		font-family: 'Poppins', sans-serif; 
+	}

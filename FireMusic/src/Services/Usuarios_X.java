@@ -1,0 +1,125 @@
+package Services;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sun.glass.ui.View;
+
+import Interfaces.InterfacesUsuarios;
+import conexion.Conexion_Usuario;
+import jdk.nashorn.internal.runtime.ListAdapter;
+import model.Usuarios;
+import utils.Database;
+
+
+@WebServlet("/usuario")
+public class Usuarios_X extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	String listar="view/user/ListUser.jsp";
+	String agregar="view/user/Usuarios.jsp";
+	String actulizar="view/user/UpdateUser.jsp";
+	Usuarios ux= new Usuarios();
+	Conexion_Usuario con_user=new Conexion_Usuario();
+    public Usuarios_X() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+    
+    protected void services(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	String acceso="";
+		String action= request.getParameter("accion");//indicar la variable <a href="controlador?accion=listar">
+		if (action.equalsIgnoreCase("listar")) {
+			acceso=listar;
+		}else if(action.equalsIgnoreCase("agregar")){
+			
+		
+			String id=request.getParameter("id_x");
+			String nombre=request.getParameter("name_x");
+			String apellidos=request.getParameter("lastName_x");
+			String nick=request.getParameter("nick_x");
+			String email=request.getParameter("email_x");
+			String fec_reg=request.getParameter("fec_reg");
+			String contraseña=request.getParameter("pwd_x");
+			ux.setID(Integer.parseInt(id));
+			ux.setName(nombre);
+			ux.setLast_name(apellidos);
+			ux.setNick(nick);
+			ux.setEmail(email);
+			ux.setFecha_Registro(fec_reg);
+			ux.setPassword(contraseña);
+			con_user.addUsuarios(ux);
+			
+			acceso= listar;
+		}
+		RequestDispatcher view = request.getRequestDispatcher(acceso);
+		view.forward(request, response);
+		
+		/*
+		 <% usuariiodao x= new usuadao();
+		 list<usuarios> lis=x.listar();
+		 iteraotr<usuarios> iter = list.iterator();
+		 ususarios xd= null;
+		 while(iter.hastnext()){
+		 xd=iter.next();
+		 } %>
+		 * 
+		 * 
+		 * <%=xd.getID()%> lista los datos de la tablas
+		 * */
+	}
+	
+	
+	
+	private void Lista(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+	protected void Add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id=request.getParameter("id_x");
+		String nombre=request.getParameter("name_x");
+		String apellidos=request.getParameter("lastName_x");
+		String nick=request.getParameter("nick_x");
+		String email=request.getParameter("email_x");
+		String fec_reg=request.getParameter("fec_reg");
+		String contraseña=request.getParameter("pwd_x");
+		
+		Usuarios x= new Usuarios();
+		x.setID(Integer.parseInt(id));
+		x.setName(nombre);
+		x.setLast_name(apellidos);
+		x.setNick(nick);
+		x.setEmail(email);
+		x.setFecha_Registro(fec_reg);
+		x.setPassword(contraseña);
+		
+		Database db=Database.getTipo(Database.MYSQL);
+		InterfacesUsuarios userx= db.getUsuarios();
+		userx.addUsuarios(x);
+		
+		Add(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void Update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
+	 */
+	protected void Delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}

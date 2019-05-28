@@ -1,0 +1,79 @@
+!SESSION 2019-05-28 16:51:26.955 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data E:\proyect XDDDDDDDDDDDD -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-05-28 16:51:40.480
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\usrcdiar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-05-28 16:52:20.051
+!MESSAGE cacheFile=file:/C:/Eclipse%20Mars%20JEE/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-05-28 16:52:20.118
+!MESSAGE cacheFile=file:/C:/Eclipse%20Mars%20JEE/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-05-28 16:53:54.742
+!MESSAGE cacheFile=file:/C:/Eclipse%20Mars%20JEE/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2019-05-28 17:29:48.106
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_121\lib\rt.jar
+  [+] C:\tomcat8\lib\annotations-api.jar
+  [+] C:\tomcat8\lib\catalina-ant.jar
+  [+] C:\tomcat8\lib\catalina-ha.jar
+  [+] C:\tomcat8\lib\catalina-storeconfig.jar
+  [+] C:\tomcat8\lib\catalina-tribes.jar
+  [+] C:\tomcat8\lib\catalina.jar
+  [+] C:\tomcat8\lib\ecj-4.6.3.jar
+  [+] C:\tomcat8\lib\el-api.jar
+  [+] C:\tomcat8\lib\jasper-el.jar
+  [+] C:\tomcat8\lib\jasper.jar
+  [+] C:\tomcat8\lib\jsp-api.jar
+  [+] C:\tomcat8\lib\servlet-api.jar
+  [+] C:\tomcat8\lib\tomcat-api.jar
+  [+] C:\tomcat8\lib\tomcat-coyote.jar
+  [+] C:\tomcat8\lib\tomcat-dbcp.jar
+  [+] C:\tomcat8\lib\tomcat-i18n-es.jar
+  [+] C:\tomcat8\lib\tomcat-i18n-fr.jar
+  [+] C:\tomcat8\lib\tomcat-i18n-ja.jar
+  [+] C:\tomcat8\lib\tomcat-jdbc.jar
+  [+] C:\tomcat8\lib\tomcat-jni.jar
+  [+] C:\tomcat8\lib\tomcat-util-scan.jar
+  [+] C:\tomcat8\lib\tomcat-util.jar
+  [+] C:\tomcat8\lib\tomcat-websocket.jar
+  [+] C:\tomcat8\lib\websocket-api.jar
+  [+] E:\proyect XDDDDDDDDDDDD\FireMusic\WebContent\WEB-INF\lib\com.mysql.jdbc_5.1.5.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
